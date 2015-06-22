@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  veg: false
+  going: false
+  allday: false
+  evening: false
+  add_info: MyText
+
+two:
+  name: MyString
+  veg: false
+  going: false
+  allday: false
+  evening: false
+  add_info: MyText

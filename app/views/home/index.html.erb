@@ -1,0 +1,99 @@
+	<section id="intro" data-speed="2" data-type="background">
+	<div style="display:inline;">
+		<div class="pull-left">
+			<%= image_tag('top-left.png', height: '650px')%>
+		</div>
+		<div class="pull-right">
+			<%= image_tag("top-right.png", height: '650px') %>
+		</div>
+		<div class="text-center scroll-down" style="display:none">
+			<h1><i class="glyphicon glyphicon-menu-down"></i></h1><br/>
+				<p> Scroll down!</p>
+		</div>
+	</div>
+	</section>
+	<section id="home" data-speed="4" data-type="background">
+		<div class="container">
+			<div class="row text-center intro-text" style="display:none;">
+				<div class="page-header">
+					<h1>welcome!</h1>
+				</div>
+				<h2>We very much hope you can join us for the day. You can send your RSVP via this website. Also included are accommodation options in Headingley, the area of Leeds where the wedding will take place, and some general information about the day. If you have any other queries just get in touch with us via the contact information included on your invitation. </h2>
+			</div>
+		</div>
+		
+	</section>
+	<section id="about" data-speed="1">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-10 col-lg-offset-1 col-md-12">
+					<div class="page-header">
+						<h1>accomodation</h1>
+					</div>
+					<h3>The venue is just under two miles from the centre of Leeds. There are the usual range of chain hotels etc. available in the centre of Leeds but we have listed below some options which are reasonable and in Headingley, which has a range of shops, cafes and pubs. All currently have availability for that weekend.</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-lg-offset-1 col-md-4" style="text-align:left;">
+					<h3><a href="http://www.headingleylodge.co.uk/about.php">Headingley Lodge</a></h3>
+					<h4>Headingley Carnegie Cricket Ground, Saint Michael's Lane, Leeds, LS6 3BR<br/>
+					Part of the rugby/cricket ground, reviews look decent and rooms are from approx. £80/a night.</h4>
+				</div>
+				<div class="col-lg-4 col-md-4" style="text-align:justify">
+					<h3><a href="http://www.weetwood.com">Weetwood Hall</a></h3>
+					<h4>Otley Road, LS16 5PS<br/>
+					Weetwood Hall is a little more expensive, but a nice hotel. It’s a bit further from the venue (maybe 2 miles further out of town). We considered it as a wedding venue and the reception room sizes didn’t work – it did look nice inside though. Prices are from about £80 per night.<br/> 
+					</h4>
+				</div>
+				<div class="col-lg-3 col-md-4" style="text-align:right;">
+					<h3><a href="http://www.clifflawn-hotel.co.uk/">Cliff Lawn</a></h3>
+					<h4>Cliff Road, Headingley, Leeds, LS9 2ET<br/>
+					This is a fifteen minute walk from the venue and has decent reviews on trip advisor (overall 4/5 stars). Prices start from around £70 per night<br/> 
+					</h4><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<p>Alternatively, Devonshire Hall itself forms part of the University of Leeds student accommodation and rooms with four feet 'mini' doubles beds are available at the Hall on the 21st and 22nd August. Please note rooms have 4ft 'mini double beds' (3/4 size) only.  Rates are approximately £50 for en-suite and £30 for shared bathrooms. Every effort will be made to ensure that any discarded traffic cones, shopping trolleys and David Hasselhoff posters are removed before guests enter the premises. Please contact Charlotte if you are interested in this option via the contact details on your invitation.<br/>These aren’t the only options nearby but we hope they give you some affordable and comfortable options.</p>
+				</div>
+			</div> 
+		</div><!-- container -->
+	</section>
+	<section id="location">
+		<div id="map-canvas"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 text-center">
+					<div class="page-header">
+						<h1> <i class="glyphicon glyphicon-map-marker"></i> Location</h1>
+					</div>
+					<h3 style="margin-bottom:10px;">Devonshire Hall is near the top end of Cumberland Road, through a gate on the left.
+					    There are no parking restrictions on Cumberland Road and you can park on the street outside the venue.
+					    Please note that the age of the building means there is no lift installed and any buggies etc. will need to be carried upstairs if you need to take them into the ceremony room. </h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="rsvp" data-speed="2" data-type="background">
+		<div class="container">
+			<div class="row text-center" style='padding-top:20%'>
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+					<div class="page-header">
+						<h1><i class="glyphicon glyphicon-ok"></i> RSVP</h1>
+					</div>
+					<h3>You can RSVP here. Start typing your first name...</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">			
+					<div class="rsvp-form">
+					</div>
+				</div>
+			</div>
+			<div class="row texy-center">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">			
+					<%= text_field_tag 'guests', nil, class: "guests-autocomplete input-lg col-lg-12 col-md-12 col-sm-12", placeholder: 'Type your name',  autocomplete: "off", data: {source: guests_path} %>
+				</div>
+			</div>
+		</div>
+	</section>

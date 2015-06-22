@@ -1,0 +1,39 @@
+<%= form_for @guest, html: {class: 'rsvp-form'}, remote: true do |f| %>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="radio">
+			<%= f.label :going, class: 'radio-inline' do %>
+			<h3> <%= f.radio_button :going, true, value: true %> Definitely going! </h3>
+			<%end%>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="radio pull-right">
+			<%= f.label :going, class: 'radio-inline' do %>
+			<h3> <%= f.radio_button :going, false,  value: false %> Won't be able to make it </h3>
+			<%end%>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="checkbox">
+			<%= f.label :veg do %>
+			<h3> <%= f.check_box :veg %> Vegetarian option (use field below for details)</h3>
+			<%end%>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="form-group">
+			<%= f.text_area :add_info, class: 'col-lg-12 col-md-12 col-sm-12 col-xs-12', rows: 6, placeholder: 'Additional information / message / insult / rant', style: 'color:black' %> 
+		</div>
+	</div>
+</div><br/>
+<div class="row">
+	<div class="col-lg-12">
+		<%= f.submit "Submit", class: 'btn btn-block submit-rsvp', style: 'color: black;'  %> 
+	</div>
+</div>		
+<%end%>
